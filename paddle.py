@@ -15,10 +15,11 @@ class Paddle(t.Turtle):
             paddle = t.Turtle()
             paddle.penup()
             paddle.speed("fastest")
-            paddle.goto(x=280 * i, y=0)
+            paddle.goto(x=270 * i, y=0)
             paddle.shape("square")
             paddle.color("white")
-            paddle.shapesize(stretch_len=0.5, stretch_wid=3, outline=1)
+            paddle.setheading(90)
+            paddle.shapesize(stretch_len=3, stretch_wid=0.5, outline=1)
             self.paddles.append(paddle)
 
     def move_up_paddle1(self):
