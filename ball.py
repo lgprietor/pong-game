@@ -16,3 +16,12 @@ class Ball(t.Turtle):
         self.setheading(self.angle)
         self.forward(20)
 
+    def reset(self):
+        self.home()
+        if self.angle > 0:
+            self.angle += 90
+        elif self.angle < 0:
+            self.angle -= 90
+
+
+
