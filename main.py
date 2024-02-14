@@ -39,7 +39,7 @@ while game_is_on:
 
     if ball.ycor() > 280 or ball.ycor() < -280:
         ball.angle = ball.angle*-1
-        print(ball.angle)
+        # print(ball.angle)
 
     # Detecting collisions with paddles:
 
@@ -62,6 +62,16 @@ while game_is_on:
             ball.angle = ball.angle + 90
 
     # print(ball.angle)
+
+    # Detecting pass of ball and adding score:
+
+    if ball.xcor() > 380:
+        scoreboard.update_score_paddle2()
+        ball.reset()
+    elif ball.xcor() < -380:
+        scoreboard.update_score_paddle1()
+        ball.reset()
+
 
 
 
