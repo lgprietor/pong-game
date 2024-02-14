@@ -19,9 +19,9 @@ class Ball(t.Turtle):
     def reset(self):
         self.home()
         if self.angle > 0:
-            self.angle += 90
+            self.angle += 180
         elif self.angle < 0:
-            self.angle -= 90
+            self.angle += (-180)
 
 
 

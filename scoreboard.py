@@ -2,7 +2,7 @@ import turtle as t
 
 LIMIT = 280
 PACE = 10
-FONT = ("Courier", 20, "normal")
+FONT = ("Courier", 60, "normal")
 
 
 class Scoreboard(t.Turtle):
@@ -22,7 +22,6 @@ class Scoreboard(t.Turtle):
 
 
         for i in range(0, LIMIT * 2, PACE):
-            self.speed("fastest")
             self.pendown()
             self.forward(PACE)
             self.penup()
@@ -33,7 +32,7 @@ class Scoreboard(t.Turtle):
         new_turtle.speed("fastest")
         new_turtle.color("white")
         new_turtle.penup()
-        new_turtle.goto(x=-50, y=270)
+        new_turtle.goto(x=-100, y=200)
         new_turtle.hideturtle()
         new_turtle.write(f"{self.score1}", move=False, align="center", font=FONT)
         self.scores.append(new_turtle)
@@ -43,7 +42,7 @@ class Scoreboard(t.Turtle):
         new_turtle.speed("fastest")
         new_turtle.color("white")
         new_turtle.penup()
-        new_turtle.goto(x=50, y=270)
+        new_turtle.goto(x=100, y=200)
         new_turtle.hideturtle()
         new_turtle.write(f"{self.score1}", move=False, align="center", font=FONT)
         self.scores.append(new_turtle)
